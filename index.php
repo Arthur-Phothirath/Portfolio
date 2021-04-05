@@ -1,5 +1,7 @@
 <?php
 require_once ("tools/db.php");
+require_once 'tools/slugify.php';
+
 
 $titlePage = "Projet Front End";
 $prefixImage= "/Portfolio/image/";

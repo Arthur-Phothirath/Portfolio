@@ -6,7 +6,6 @@ if($category == "back"){
 }else{
     $prefixProject = "project-front/";
 }
-
 ?>
         <div class="headerfantom"></div>
         
@@ -20,7 +19,7 @@ if($category == "back"){
                 ?>
                 <div class="projet1 card_main_front">
                         <img src="https://via.placeholder.com/480x864.png">
-                    <a href= "<?php echo $prefixProject.$id ?>">              
+                    <a href= "<?php echo $prefixProject.$id."-".slugify($name) ?>">              
                         <div class="texte_banniere_back card_main_front">
                             <h3><?php echo "$name <br> $projectDate <br> $technologies" ?>
                             </h3>
@@ -28,22 +27,4 @@ if($category == "back"){
                     </a>   
                 </div>
             <?php endforeach; ?>
-            <div class="projet1 card_main_front">
-                <img src="https://via.placeholder.com/480x864.png">
-                <div class="texte_banniere_back card_main_front">
-                    <h3>Projet 2</h3>
-                </div>
-            </div>
-            <div class="projet1 card_main_front">
-                <img  href="#" src="https://via.placeholder.com/480x864.png">
-                <div class="texte_banniere_back card_main_front">
-                    <h3>Projet 3</h3>
-                </div>
-            </div>
-            <div class="projet1 card_main_front">
-                <img  href="#" src="https://via.placeholder.com/480x864.png">
-                <div class="texte_banniere_back card_main_front">
-                    <h3>Projet 4</h3>
-                </div>
-            </div>
         </div>
