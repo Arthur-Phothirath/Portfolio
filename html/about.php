@@ -1,32 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style_about.css">
-    <link href="../css/hover-min.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>About Me</title>
-</head>
-<body>
-    <div class="container">
-        <!--Header-->
-        <header class="main-header">
-                <nav class="nav-navigation">
-                    <div class="nav-wrapper">
-                        <h2>Phothirath Arthur</h2>
-                        <input id="menu-checkbox" type="checkbox" class="menu-checkbox" />
-                        <label for="menu-checkbox" class="menu-toggle">&equiv;</label>
-                            <ul class="menu">
-                                <li><a href="../index.html" class="f">Front-End</a></li>
-                                <li><a href="accueil_back.html" class="b">Back-End</a></li>
-                                <li><a href="about.html" class="a">A propos de moi</a></li>
-                                <li><a href="#contactpart" class="contact">Contact</a></li>
-                            </ul>
-                            
-                    </div>    
-                </nav>
-        </header>
+<?php
+require_once ("../tools/db.php");
+$phoneNumber = "06 XX XX XX XX";
+$mail = "a_phothirath@etu_webschoolfactory.fr";
+$addresse = "20 rue manganta, 75018 Paris";
+$linkedin= "Linkedin";
+$github="Github";
+$titlePage = "A propos de moi";
+$prefixImage= "/Portfolio/image/";
+$stylePage="style_about.css";
+
+$contact = query("SELECT * FROM contact WHERE id=1")->fetch();
+if(!$contact){
+    extract($contact);
+}
+?>
+<?php include '../inc/header.php' ?>
 
         <div class="headerfantom"></div>
         
@@ -46,7 +34,7 @@
                 <div class="card about_card">
                     <div class="sub_about">
                         <div class="photo">
-                            <img src="../image/Photo.jpg" alt="" class="sub_photo">
+                            <img src="<?php echo $prefixImage ; ?>Photo.jpg" alt="" class="sub_photo">
                         </div>
                         <div class=bio>
                             <p>Je m'appelle Arthur PHOTHIRATH 24 ans, actuellement étudiant à la Tech And Code Factory pour un bachelor en informatique, je suis passionnée par les nouvelles technologies.</p>
@@ -75,8 +63,8 @@
                             <h5>Front-End</h5>
                         </div>
                         <div>
-                            <img src="../image/html.jpg" alt="" class="">
-                            <img src="../image/css3.jpg" alt="" class="">
+                            <img src="<?php echo $prefixImage ; ?>html.jpg" alt="" class="">
+                            <img src="<?php echo $prefixImage ; ?>css3.jpg" alt="" class="">
                         </div>
                     </div>
                     <hr>
@@ -85,8 +73,8 @@
                             <h5>Back-End</h5>
                         </div>
                         <div>
-                            <img src="../image/python.jpg" alt="" class="">
-                            <img src="../image/php.jpg" alt="" class="">
+                            <img src="<?php echo $prefixImage ; ?>python.jpg" alt="" class="">
+                            <img src="<?php echo $prefixImage ; ?>php.jpg" alt="" class="">
                         </div>
                     </div>  
                 </div>
@@ -107,8 +95,8 @@
                             <h5>Front-End</h5>
                         </div>
                         <div>
-                            <img src="../image/java.jpg" alt="" class="">
-                            <img src="../image/bootstrap.jpg" alt="" class="">
+                            <img src="<?php echo $prefixImage ; ?>java.jpg" alt="" class="">
+                            <img src="<?php echo $prefixImage ; ?>bootstrap.jpg" alt="" class="">
                         </div>
                     </div>
                     <hr>
@@ -117,8 +105,8 @@
                             <h5>Back-End</h5>
                         </div>
                         <div>
-                            <img src="../image/angular.jpg" alt="" class="">
-                            <img src="../image/Csharp.jpg" alt="" class="">
+                            <img src="<?php echo $prefixImage ; ?>angular.jpg" alt="" class="">
+                            <img src="<?php echo $prefixImage ; ?>Csharp.jpg" alt="" class="">
                         </div>
                     </div>  
                 </div>
@@ -168,23 +156,23 @@
                         <div class=sub-contact>
                             <div class="detail">
                                 <i class="fas fa-phone-square fa-2x"></i>
-                                <p>+33 6 XX XX XX</p>
+                                <p><?php echo $phoneNumber ?></p>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-envelope fa-2x"></i>
-                                <p>a_phothirath@etu_webschoolfactory.fr</p>
+                                <p><?php echo $mail ?></p>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-map-marker-alt fa-2x"></i>
-                                <p>20 rue manganta, 75018 Paris</p>
+                                <p><?php echo $addresse ?></p>
                             </div>
                             <div class="detail">
                                 <i class="fab fa-linkedin fa-2x"></i>
-                                <u><p>Linkedin</p></u>
+                                <u><p><?php echo $linkedin ?></p></u>
                             </div>
                             <div class="detail">
                                 <i class="fab fa-github-square fa-2x"></i>
-                                <u><p>Github</p></u>
+                                <u><p><?php echo $github ?></p></u>
                             </div>
                         </div>
                     </div>
@@ -192,19 +180,4 @@
             </div> 
         </div> 
         <!-- Footer -->
-        <footer>
-            <div class="retour">
-                <a href="../index.html">Back</a>
-            </div>
-            <div class="legal">
-                <a href="mention.html">Mention légal</a>
-            </div>
-            <div class="foot_contact">
-                <h4>&#128231;a_phothirath@etu_webschoolfactory.fr</h4>
-                <h4>&#9990;06 XX XX XX XX</h4>
-                <h4>&#128681;20 rue manganta, 75018 Paris</h4>
-            </div>
-        </footer>
-    </div>
-</body>
-</html>
+<?php include "../inc/footer.php" ?>

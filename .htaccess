@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^backend$ html/HomeBackEnd.php
+RewriteRule ^about$ html/about.php
+RewriteRule ^project-back/([0-9]+)$ html/projet-back.php?id=$1
+RewriteRule ^project-front/([0-9]+)$ html/projet-front.php?id=$1
+RewriteRule ^mention$ html/mention.php
