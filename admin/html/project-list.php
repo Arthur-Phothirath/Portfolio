@@ -32,8 +32,8 @@ $projectList = query("SELECT id, name, projectDate, technologies, createdAt FROM
                     <td>'.$project['createdAt'].'</td>
 
                     <td>
-                        <a href="project-edit.php?id='.$project['id'].'" class="btn btn-outline-dark btn-block">Modifier</a>
-                        <a href="project-delete.php?id='.$project['id'].'" class="btn btn-outline-dark btn-block">Supprimer</a>
+                        <a href="project/edit/'.$project['id'].'" class="btn btn-outline-dark btn-block">Modifier</a>
+                        <a href="project/delete/'.$project['id'].'" class="btn btn-outline-dark btn-block">Supprimer</a>
                     </td>';
                 }
                 ?>

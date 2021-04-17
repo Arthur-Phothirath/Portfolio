@@ -20,7 +20,7 @@ function dd($var){
 	die();
 }
 
-
+// A NOTER
 function query($sql, $params = [])
 {
     try

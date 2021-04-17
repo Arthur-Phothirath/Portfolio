@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^contact$ html/contact-info.php
+RewriteRule ^add$ html/project-edit.php
+RewriteRule ^list$ html/project-list.php
+
+RewriteRule ^project/edit/([0-9])+$ html/project-edit.php?id=$1
+RewriteRule ^project/delete/([0-9])+$ html/project-delete.php?id=$1
