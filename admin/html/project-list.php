@@ -33,7 +33,7 @@ $projectList = query("SELECT id, name, projectDate, technologies, createdAt FROM
 
                     <td>
                         <a href="project/edit/'.$project['id'].'" class="btn btn-outline-dark btn-block">Modifier</a>
-                        <a href="project/delete/'.$project['id'].'" class="btn btn-outline-dark btn-block">Supprimer</a>
+                        <a href="#" data-id="'.$project['id'].'" class="btn btn-outline-dark btn-block deleteButton">Supprimer</a>
                     </td>';
                 }
                 ?>
@@ -41,4 +41,17 @@ $projectList = query("SELECT id, name, projectDate, technologies, createdAt FROM
     </table>
 </div>
 
+<script>
+let deleteButton = document.querySelectorAll(".deleteButton");
+deleteButton.forEach(element => {
+    element.addEventListener('click', e =>{
+    e.preventDefault();
+    let alerte = confirm("Voulez-supprimez votre projet?");
+    if(alerte === true){
+        window.location.href = "project/delete/"+element.dataset.id;
+    }
+
+    })
+});
+</script>
 <?php include "../inc/footer.html"; ?>
