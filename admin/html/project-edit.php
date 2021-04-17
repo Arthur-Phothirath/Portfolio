@@ -1,4 +1,5 @@
 <?php
+require_once '../session.php';
 require_once '../../tools/slugify.php';
 require_once '../../tools/db.php';
 $title= "Modification du projet";

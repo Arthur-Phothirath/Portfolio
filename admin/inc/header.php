@@ -1,3 +1,10 @@
+<?php
+$a = '<a href="logout">Déconnexion</a>';
+if(empty($_SESSION['user'])){
+	$a ='<a href="login">Connexion</a>';
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +27,9 @@
 			<ul>
 				<li><a href="list">Voir tous les projets</a></li>
 				<li><a href="add">Ajouter un projet</a></li>
-                <li><a href="contact">Changer les données de contact</a></a></li>
+                <li><a href="contact">Changer les données de contact</a></li>
+				<li><?php echo $a ?></li>
+
 			</ul>
 			
 		</nav>
