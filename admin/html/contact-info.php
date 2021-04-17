@@ -28,27 +28,26 @@ if(!empty($contact)){
 <?php include "../inc/header.php"; ?>
 
     <div id="content">
-    <form method='post'>
+        <form method='post'>
 
-        <div>
-            <label>Numéro de téléphone</label>
-            <input type = 'texte' name='phoneNumber' id='phoneNumber' value='<?php echo $phoneNumber ?>'>
-        </div>
+            <div>
+                <label>Numéro de téléphone</label>
+                <input type = 'texte' name='phoneNumber' id='phoneNumber' value='<?php echo $phoneNumber ?>'>
+            </div>
 
-        <div>
-            <label>Mail</label>
-            <input type = 'texte' name='mail' id='mail' value='<?php echo $mail ?>'>
-        </div>
+            <div>
+                <label>Mail</label>
+                <input type = 'texte' name='mail' id='mail' value='<?php echo $mail ?>'>
+            </div>
 
-        <div>
-            <label>Adresse</label>
-            <input type = 'texte' name='addresse' id='addresse' value='<?php echo $addresse ?>'>
-        </div>
+            <div>
+                <label>Adresse</label>
+                <input type = 'texte' name='addresse' id='addresse' value='<?php echo $addresse ?>'>
+            </div>
 
-        <button type='submit' name='update'>Modifier</button>
+            <button type='submit' name='update'>Modifier</button>
 
-
-    </form>
+        </form>
     </div>
 
 <?php include "../inc/footer.html"; ?>
