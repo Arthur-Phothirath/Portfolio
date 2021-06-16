@@ -4,10 +4,9 @@ require_once 'tools/slugify.php';
 
 
 $titlePage = "Projet Front End";
-$prefixImage= "/Portfolio/image/";
+$prefixImage= "/image/";
 $stylePage="style_projet.css";
 $category = "front";
-
 ?>
 <?php include "inc/header.php" ?>
 

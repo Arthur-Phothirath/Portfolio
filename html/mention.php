@@ -1,7 +1,7 @@
 <?php
 require_once ("../tools/db.php");
 $titlePage = "Mention légal";
-$prefixImage= "/Portfolio/image/";
+$prefixImage= "/image/";
 $stylePage="style_about.css";
 ?>
 

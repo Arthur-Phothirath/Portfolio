@@ -3,7 +3,7 @@ require_once '../tools/slugify.php';
 require_once ("../tools/db.php");
 
 $titlePage = "Projet Back End";
-$prefixImage= "/Portfolio/image/";
+$prefixImage= "/image/";
 $stylePage="style_projet.css";
 $category = "back";
 

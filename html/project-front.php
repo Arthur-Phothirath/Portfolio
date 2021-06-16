@@ -2,7 +2,7 @@
 require_once ("../tools/db.php");
 
 $titlePage = "Projet Front End";
-$prefixImage= "/Portfolio/image/";
+$prefixImage= "/image/";
 $stylePage="style_projet.css";
 if(empty($_GET["id"])){
     die("Pas d'id");
@@ -31,10 +31,7 @@ if(empty($project)){
             <div id="scroll_to_top">
                 <a href="#top">&#11014;</a>
             </div>
-            <!-- Bannière -->
-            <div class="banniere">
-                <!-- imgbannnière -->
-            </div>
+            
             <!--Card Introduction-->
 
             <div class="intro" id="partie1">
@@ -45,9 +42,7 @@ if(empty($project)){
                     <div class="sub_intro">
                         <div class="introduction">
                             <p><?php echo $project['introduction']; ?></p>                     
-                            <nav>   
-                                <a href="#" class="button hvr-push">Accès au code</a>
-                            </nav>
+                            
                         </div>   
                     </div>
                 </div>
@@ -79,10 +74,7 @@ if(empty($project)){
                             <h4>HTML et CSS</h4>
                         </div>
                         <p> <?php echo $project["realization"]; ?> </p>
-                        <div>
-                            <img src="../image/html.jpg" alt="" class="">
-                            <img src="../image/html.jpg" alt="" class="">
-                        </div>
+                        
                     </div>
                 </div>
             </div>

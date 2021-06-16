@@ -6,7 +6,7 @@ $addresse = "20 rue manganta, 75018 Paris";
 $linkedin= "Linkedin";
 $github="Github";
 $titlePage = "A propos de moi";
-$prefixImage= "/Portfolio/image/";
+$prefixImage= "/image/";
 $stylePage="style_about.css";
 
 $contact = query("SELECT * FROM contact WHERE id=1")->fetch();
