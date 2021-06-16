@@ -10,3 +10,7 @@ RewriteRule ^logout$ html/logout.php
 
 RewriteRule ^project/edit/([0-9])+$ html/project-edit.php?id=$1
 RewriteRule ^project/delete/([0-9])+$ html/project-delete.php?id=$1
+
+SetEnv DB_USERNAME "Arthur"
+SetEnv DB_PASSWORD "password"
+SetEnv API_TOKEN ""

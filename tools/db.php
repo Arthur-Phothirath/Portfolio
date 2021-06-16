@@ -1,8 +1,8 @@
 <?php
 $host 		= "localhost";
 $dbname 	= "portfolio";
-$username 	= "Arthur";
-$password 	= "password";
+$username 	= $_ENV["DB_USERNAME"];
+$password 	= $_ENV["DB_PASSWORD"];
 
 try
 {
