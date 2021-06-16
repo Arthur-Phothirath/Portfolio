@@ -1,2 +1,2 @@
-Nom user = Blop
-Password = 1234
+Projet Porfolio.
+Langage: PHP
