@@ -1,12 +1,8 @@
 <?php
-$host 		= "localhost";
-$dbname 	= "portfolio";
-$username 	= $_ENV["DB_USERNAME"];
-$password 	= $_ENV["DB_PASSWORD"];
 
 try
 {
-    $db = new PDO('mysql:host='."localhost".';dbname='."id17059733_portfolio", "id17059733_arthur", "mvJPrj]~M0Y&++L^");
+    $db = new PDO('mysql:host='.getenv("DB_HOST").';dbname='.getenv("DB_NAME"), getenv("DB_USERNAME"), getenv("DB_PASSWORD"));
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $ex)
