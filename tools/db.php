@@ -6,7 +6,7 @@ $password 	= $_ENV["DB_PASSWORD"];
 
 try
 {
-    $db = new PDO('mysql:host='."localhost".';dbname='."id17059733_portfolio", "id17059733_arthur", "mvJPrj]~M0Y&++L^");
+    $db = new PDO('mysql:host='.$_ENV["DB_HOST"].';dbname='.$_ENV["DB_NAME"], $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"]);
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $ex)
